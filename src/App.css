@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.bg {
+  background-image: url(./Assets/Images/img2.jpg);
+  width: 1423px;
+  height: 800px;
+  background-size: cover;
+}
+
+
