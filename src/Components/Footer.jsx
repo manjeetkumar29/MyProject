@@ -10,7 +10,7 @@ export default function Footer() {
             name: 'Blog'
         },
         {
-            href: 'javascript:void()',
+            href: '/contactus',
             name: 'Contactus'
         },
         {
