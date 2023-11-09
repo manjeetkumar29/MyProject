@@ -3,6 +3,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer';
 import Herosection from './Components/Herosection';
+ 
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
     
     <Navbar></Navbar>
     <div className=' relative'>
-    <div className='bg absolute'></div>
+    <div className='bg absolute min-h-[100vh] w-full'></div>
     <Herosection></Herosection>
     </div>
-    <div className='p-[200px]'>
+    <div className='p-[20px]'>
     <Footer></Footer>
 
     </div>
