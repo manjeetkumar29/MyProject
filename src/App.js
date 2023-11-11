@@ -7,6 +7,9 @@ import Herosection from './Components/Herosection';
 import Cards from './Components/Cards';
 import { Home } from './Components/Pages/Home';
 import Contactus from './Components/Pages/Contactus';
+import Aboutus from './Components/Pages/Aboutus';
+import Login from './Components/Pages/Login';
+import Signup from './Components/Pages/Signup';
 // import Cards from './Components/Cards';
  
 
@@ -18,6 +21,9 @@ function App() {
    <Routes>
     <Route path="/" element={<Home />}/>
     <Route path="/contactus" element={<Contactus />}/>
+    <Route path="/Aboutus" element={<Aboutus />}/>
+    <Route path="/Login" element={<Login />}/>
+    <Route path="/Signup" element={<Signup />}/>
    </Routes>
     <Footer/>
 

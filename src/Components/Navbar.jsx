@@ -7,6 +7,7 @@ const navigation = [
   { name: 'Horoscope', href: '#', current: false },
   { name: 'Zodiac Sign', href: '#', current: false },
   { name: '2023 Review', href: '#', current: false },
+  { name: 'Chat with Astrologer', href: '#', current: false },
   // { name: 'signup', href: '#', current: false },
 ]
 
@@ -60,25 +61,28 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+                {/* <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 {/* Profile dropdown */}
+                <a href='/Login'><button className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Login</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='/Signup'><button className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Signup</button></a>
+                
                 <Menu as="div" className="relative ml-3">
-                  <div>
+                  {/* <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <a href='#' style={{ color: 'white' }}>Login </a>&nbsp;&nbsp;
                       <a href='#' style={{ color: 'white' }}>Signup</a>
                     </Menu.Button>
-                  </div>
+                  </div> */}
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"

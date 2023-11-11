@@ -14,7 +14,7 @@ export function Home(){
     <div className='p-[50px] bg-gray-500'>
     < Cards></Cards>
     </div>
-    <div className='p-[20px]'>
+    <div className='p-[20px] bg-gray-500'>
 
     </div>
     </>)

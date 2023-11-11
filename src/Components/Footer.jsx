@@ -2,7 +2,7 @@ export default function Footer() {
 
     const footerNavs = [
         {
-            href: 'javascript:void()',
+            href: '/aboutus',
             name: 'Aboutus'
         },
         {
