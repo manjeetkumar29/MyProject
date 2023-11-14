@@ -42,5 +42,19 @@
   height: 800px;
   background-size: cover; */
 }
+.ag{
+  background-image: url(./Assets/Images/img5.jpg);
+  
+}
+
+.cg{
+  background-image: url(./Assets/Images/img5.jpg);
+}
+
+/* .myfooter {
+  background: linear-gradient(to bottom, rgb(58, 34, 194), rgb(66, 13, 13));
+} */
+
+
 
 

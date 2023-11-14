@@ -1,9 +1,10 @@
 export default () => {
     return (
-        <main className="w-full h-screen flex flex-col items-center justify-center px-4">
-            <div className="max-w-sm w-full text-gray-600">
+        <div className="ag">
+        <main className="w-full h-screen flex flex-col items-center justify-center px-4 ">
+            <div className="max-w-sm w-full text-gray-600 px-5 rounded-md py-4 bg-gray-50 ">
                 <div className="text-center">
-                    <img src="https://floatui.com/logo.svg" width={150} className="mx-auto" />
+                    {/* <img src="https://floatui.com/logo.svg" width={150} className="mx-auto " /> */}
                     <div className="mt-5 space-y-2">
                         <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Log in to your account</h3>
                         <p className="">Don't have an account? <a href="/Signup" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a></p>
@@ -44,5 +45,6 @@ export default () => {
                 </form>
             </div>
         </main>
+        </div>
     )
 }
