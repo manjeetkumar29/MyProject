@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Horoscope', href: '#', current: false },
   { name: 'Zodiac Sign', href: '#', current: false },
-  { name: '2023 Review', href: '#', current: false },
+  { name: '2023 Review', href: '/Review', current: false },
   { name: 'Chat with Astrologer', href: '#', current: false },
   // { name: 'signup', href: '#', current: false },
 ]
@@ -41,6 +41,7 @@ export default function Navbar() {
                     src="logo.png"
                     alt="Your Company"
                   />
+                  <h2 className='text-white'>MYSTIC GUIDENCE</h2>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

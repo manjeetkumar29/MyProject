@@ -29,10 +29,10 @@ export default function Footer() {
     ]
 
     return (
-        <div className="myfooters bg-gray-50" >
-        <footer className="text-gray-600 bg-gray-50 px-4 py-5 max-w-screen-xl mx-auto md:px-8 ">
+        <div className="myfooters bg-gray-800" >
+        <footer className="text-white bg-gray-800 px-4 py-5 max-w-screen-xl mx-auto md:px-8 ">
             <div className="max-w-lg sm:mx-auto sm:text-center">
-                <img src="https://www.floatui.com/logo.svg" className="w-32 sm:mx-auto" />
+                <img src="/logo.png" className="w-32 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-[15px]">
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
                 {
                     footerNavs.map((item, idx) => (
-                        <li className=" hover:text-gray-800">
+                        <li className=" hover:text-yellow-500">
                             <a key={idx} href={item.href}>
                                 { item.name }
                             </a>
