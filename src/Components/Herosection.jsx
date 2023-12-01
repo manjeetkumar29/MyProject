@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useeff} from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import './Herosection.css';
@@ -15,6 +15,7 @@ export default function Herosection() {
 
   return (
     <div className="myhero bg-white">
+      
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -154,6 +155,10 @@ export default function Herosection() {
           />
         </div>
       </div>
+      <div>
+      </div>
     </div>
+    
   )
 }
+

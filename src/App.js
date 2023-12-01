@@ -10,6 +10,8 @@ import Contactus from './Components/Pages/Contactus';
 import Aboutus from './Components/Pages/Aboutus';
 import Login from './Components/Pages/Login';
 import Signup from './Components/Pages/Signup';
+import Horroscope from './Components/Pages/Horroscope'
+import Review from './Components/Pages/Review';
 // import Cards from './Components/Cards';
  
 
@@ -24,6 +26,8 @@ function App() {
     <Route path="/Aboutus" element={<Aboutus />}/>
     <Route path="/Login" element={<Login />}/>
     <Route path="/Signup" element={<Signup />}/>
+    <Route path="/Horroscope" element={<Horroscope />}/>
+    <Route path="/Review" element={<Review />}/>
    </Routes>
     <Footer/>
 

@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Horoscope', href: '#', current: false },
+  { name: 'Horoscope', href: '/Horroscope', current: false },
   { name: 'Zodiac Sign', href: '#', current: false },
   { name: '2023 Review', href: '/Review', current: false },
   { name: 'Chat with Astrologer', href: '#', current: false },
