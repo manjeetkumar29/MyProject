@@ -3,57 +3,52 @@ export default function Cards() {
 
     const posts = [
         {
-            title: "What is SaaS? Software as a Service Explained",
-            desc: "he Quadrantids is an above average shower, with up to 40 meteors per hour at its peak. It is thought to be produced by dust grains left behind by an extinct comet known as 2003 EH1, which was discovered in 2003. The shower runs annually from January 1-5.",
-            img: "/meteor.jpg",
-            authorLogo: "/meteor.jpg",
-            authorName: "Sidi dev",
-            date: "Jan 4 2022",
+            title: "Quadrantids Meteor Shower ",
+            desc: "This is often one of the strongest meteor showers of the year, capable of showcasing up to 120 meteors per hour at its peak. The Quadrantids are active between December 27 and January 12, but the peak is usually quite narrow, lasting only a few hours. This makes the timing of the viewing crucial. In 2024, the peak is set for around 4:00 AM EST on January 4.",
+            img: "/images/Quadrantids Meteor Shower.jpg",
+            authorLogo: "/images/ho.jpg",
+            date: "Jan 3 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "A Quick Guide to WordPress Hosting",
-            desc: "According to him, â€œI'm still surprised that this has happened. But we are surprised because we are so surprised.â€More revelations about Whittington will be featured in the film",
-            img: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://api.uifaces.co/our-content/donated/FJkauyEa.jpg",
-            authorName: "Micheal",
-            date: "Jan 4 2022",
+            title: "Total solar eclipse ",
+            desc: "This eclipse will trace a narrow path of totality across 13 states. The event will last around five minutes. This duration is almost double the length of some previous eclipses.",
+            img: "/images/2_image.jpg",
+            authorLogo: "/images/ho.jpg",
+            date: "April 4 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "7 Promising VS Code Extensions Introduced in 2022",
-            desc: "I hope I remembered all the stuff that they needed to know. They're like, 'okay,' and write it in their little reading notebooks. I realized today that I have all this stuff that",
-            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://randomuser.me/api/portraits/men/46.jpg",
-            authorName: "Luis",
-            date: "Jan 4 2022",
+            title: "Perseid Meteor Shower (August 12 — 13)",
+            desc: "The Perseids is an annual astronomical event that is eagerly anticipated by stargazers in the US and around the world. It is one of the most impressive meteor showers of the year because it can produce a high rate of shooting stars that frequently leave persistent colorful trails across the sky.",
+            img: "/images/image3.jpg",
+            authorLogo: "/images/ho.jpg",
+            date: "August 12 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "How to Use Root C++ Interpreter Shell to Write C++ Programs",
-            desc: "The powerful gravity waves resulting from the impact of the planets' moons â€” four in total â€” were finally resolved in 2015 when gravitational microlensing was used to observe the",
-            img: "https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://api.uifaces.co/our-content/donated/KtCFjlD4.jpg",
-            authorName: "Lourin",
-            date: "Jan 4 2022",
+            title: "Saturn at opposition (September 8)",
+            desc: "Stargazers should be able to observe Saturn more clearly on this night, even with unaided eyes, by looking in the east-southeast direction after sunset. It will stand out in the sky, appearing as a bright yellowish star.",
+            img: "/images/image4.jpg",
+            authorLogo: "/images/ho.jpg",
+            date: "September 8 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "How to Use Root C++ Interpreter Shell to Write C++ Programs",
-            desc: "The powerful gravity waves resulting from the impact of the planets' moons â€” four in total â€” were finally resolved in 2015 when gravitational microlensing was used to observe the",
-            img: "https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://api.uifaces.co/our-content/donated/KtCFjlD4.jpg",
-            authorName: "Lourin",
-            date: "Jan 4 2022",
+            title: "Taurids Meteor Shower (November 4-5)",
+            desc: "Annual Event Of Leonid Meteor Shower Can Be Seen On 16-17th November. Leonid Meteor Shower Is Visible Towards The Constellation Leo, The Lion. During Leonid Meteor Shower, Earth Will Pass Through A Stream Of Debris Which Is Left Behind By Comet Tempel-Tuttle.",
+            img: "/images/image5.jpg",
+            authorLogo: "/images/ho.jpg",
+            date: "November 4 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "What is SaaS? Software as a Service Explained",
-            desc: "Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people what they did for their anxiety, and some",
-            img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-            authorName: "Sidi dev",
-            date: "Jan 4 2022",
+            title: "about New moon (December 30)",
+            desc: "On this day the Moon was in a First Quarter phase. This phase occurs roughly 7 days after the New Moon when the moon is one quarter of the way through its orbit around the earth",
+            img: "/images/image6.jpg",
+            authorLogo: "/images/ho.jpg",
+            
+            date: "December 30 2024",
             href: "javascript:void(0)"
         }
     ]
