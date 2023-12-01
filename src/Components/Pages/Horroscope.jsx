@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-
+import { Input } from "@material-tailwind/react";
+import Card2 from "../Card2";
 export default function Horroscope(){
+    
 
     const [state, setState] = useState(false)
 
@@ -22,14 +24,14 @@ export default function Horroscope(){
 
     const Brand = () => (
         <div className="flex items-center justify-between py-5 md:block">
-            <a href="javascript:void(0)">
+            {/* <a href="javascript:void(0)">
                 <img
                     src="https://www.floatui.com/logo-dark.svg"
                     width={120}
                     height={50}
                     alt="Float UI logo"
                 />
-            </a>
+            </a> */}
             <div className="md:hidden">
                 <button className="menu-btn text-gray-400 hover:text-gray-300"
                     onClick={() => setState(!state)}
@@ -51,6 +53,8 @@ export default function Horroscope(){
     )
 
     return (
+        <>
+
         <div className="bg-gray-900">
             <header>
                 <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
@@ -60,7 +64,7 @@ export default function Horroscope(){
                     <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                         <Brand />
                         <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
-                            <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                            {/* <ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                                 {
                                     navigation.map((item, idx) => {
                                         return (
@@ -80,44 +84,88 @@ export default function Horroscope(){
                                         </svg>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </nav>
             </header>
-            <section className="relative">
+            <section className="relative flex">
+                {/* <div className="flex w-72 flex-col gap-6">
+                    <Input color="blue" label="Input Blue" />
+                    <Input color="purple" label="Input Purple" />
+                    <Input color="indigo" label="Input Indigo" />
+                    <Input color="teal" label="Input Teal" />
+                </div> */}
+            <div className="max-w-sm w-full text-gray-600 px-5 rounded-md py-4 bg-gray-50 ms-3 mb-3  "> 
+                <form
+                    onSubmit={(e) => e.preventDefault()}
+                    className="mt-8 space-y-5"
+                >
+                    <div>
+                        <div>
+                            <h1 className="text-green-600"><b>Enter the Details</b></h1>
+                        </div>
+                        <label className="font-medium">
+                            Language
+                        </label>
+                        <input
+                            type="email"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">
+                            Period
+                        </label>
+                        <input
+                            type="password"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">
+                            Sign
+                        </label>
+                        <input
+                            type="email"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">
+                            Type
+                        </label>
+                        <input
+                            type="password"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                     
+                </form>
+            </div>   
                 <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
                     <div className="space-y-5 max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl text-white font-extrabold mx-auto md:text-5xl">
-                            Build and scale up your startup with the best tools
+                            Explore the Stars and Your Fate
                         </h2>
-                        <p className="max-w-2xl mx-auto text-gray-400">
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                        </p>
+                         
                         <form
                             onSubmit={(e) => e.preventDefault()}
                             className="justify-center items-center gap-x-3 sm:flex">
-                            <input
-                                type="text"
-                                placeholder="Enter your email"
-                                className="w-full px-3 py-2.5 text-gray-400 bg-gray-700 focus:bg-gray-900 duration-150 outline-none rounded-lg shadow sm:max-w-sm sm:w-auto"
-                            />
-                            <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-sky-500 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
+                             
+                            {/* <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-sky-500 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
                                 Get started
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
                                 </svg>
-                            </button>
+                            </button> */}
                         </form>
                         <div className="flex justify-center items-center gap-x-4 text-gray-400 text-sm">
-                            <div className="flex">
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                            </div>
-                            <p><span className="text-gray-100">5.0</span> by over 200 users</p>
+                             
                         </div>
                     </div>
                 </div>
@@ -125,5 +173,7 @@ export default function Horroscope(){
             </section>
         </div>
         
+        
+        </>
     )
 }

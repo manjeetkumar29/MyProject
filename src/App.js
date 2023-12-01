@@ -12,6 +12,7 @@ import Login from './Components/Pages/Login';
 import Signup from './Components/Pages/Signup';
 import Horroscope from './Components/Pages/Horroscope'
 import Review from './Components/Pages/Review';
+
 // import Cards from './Components/Cards';
  
 

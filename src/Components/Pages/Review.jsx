@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Card2 from "../Card2";
 export default function Review() {
 
     const [state, setState] = useState(false)
@@ -51,6 +51,7 @@ export default function Review() {
     )
 
     return (
+        <>
         <div className="bg-gray-900">
             <header>
                 <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
@@ -124,5 +125,7 @@ export default function Review() {
                 <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg" style={{ background: "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}></div>
             </section>
         </div>
+        <Card2></Card2>
+        </>
     )
 }
