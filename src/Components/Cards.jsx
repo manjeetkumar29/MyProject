@@ -4,9 +4,9 @@ export default function Cards() {
     const posts = [
         {
             title: "What is SaaS? Software as a Service Explained",
-            desc: "Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people what they did for their anxiety, and some",
-            img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-            authorLogo: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+            desc: "he Quadrantids is an above average shower, with up to 40 meteors per hour at its peak. It is thought to be produced by dust grains left behind by an extinct comet known as 2003 EH1, which was discovered in 2003. The shower runs annually from January 1-5.",
+            img: "/meteor.jpg",
+            authorLogo: "/meteor.jpg",
             authorName: "Sidi dev",
             date: "Jan 4 2022",
             href: "javascript:void(0)"

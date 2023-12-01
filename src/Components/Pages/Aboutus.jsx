@@ -7,29 +7,29 @@ import base_url from "../../Utils/server";
 import { toast } from "react-toastify";
 export default function Aboutus() {
   const team = [{
-    avatar:"",
+    avatar:"https://media.licdn.com/dms/image/D4D03AQHihwu0H6fTPw/profile-displayphoto-shrink_800_800/0/1678861597966?e=1705536000&v=beta&t=acuebJAp8LfbaNozMXoCiYroeUYmpUT9X83muYXuNwg",
     name:"Manjeet Kumar",
     title:"",
     description:"",
     twitter:"",
     github:"",
-    linkedin:"",
+    linkedin:"https://www.linkedin.com/in/manjeet-kumar-10a78b259/",
   },{
-    avatar:"",
-    name:"",
+    avatar:"https://media.licdn.com/dms/image/D4D03AQEtH41UvHu9tg/profile-displayphoto-shrink_800_800/0/1680094795285?e=1705536000&v=beta&t=hyMoOOUXi8gdSUb9V26ODbtGWaRkMVw0DuQZft1M3cE",
+    name:"Nithish Deepala",
     title:"",
     description:"",
     twitter:"",
     github:"",
-    linkedin:"",
+    linkedin:"https://www.linkedin.com/in/nithish-deepala-b7b3a525a/",
   },{
-    avatar:"",
-    name:"",
+    avatar:"https://media.licdn.com/dms/image/D4D03AQEcjIwYeHgFvA/profile-displayphoto-shrink_800_800/0/1673860828517?e=1705536000&v=beta&t=_82Ne0xFFGJZgHPPUB538mn1Usb7QFVDipgNW7rvdDQ",
+    name:"Astitva Rajesh",
     title:"",
     description:"",
     twitter:"",
     github:"",
-    linkedin:"",
+    linkedin:"https://www.linkedin.com/in/astitva-srivastava-0a63a7258/",
   }]
 //   const [token, setToken] = useState(null);
 //   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Aboutus() {
               Meet our team of Developers and Designers.
             </h3>
             <p className="text-gray-600 mt-3">
-              At Thread our diverse team of passionate individuals brings a
+              At Mystic Guidence our diverse team of passionate individuals brings a
               wealth of expertise and a relentless pursuit of excellence. We
               collaborate seamlessly, combining our talents to tackle challenges
               and achieve remarkable results.
