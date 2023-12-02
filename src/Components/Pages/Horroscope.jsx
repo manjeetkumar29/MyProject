@@ -87,7 +87,7 @@ export default function Horroscope(){
       method: 'GET',
       url: `https://horoscopes-ai.p.rapidapi.com/get_horoscope/${selectedSign}/${selectedPeriod}/${selectedType}/${selectedLanguage}`,
       headers: {
-        'X-RapidAPI-Key': '74a2423726msh3a26e9ce0e8a5cdp1b8bdajsnf76125bfe2d0',
+        'X-RapidAPI-Key': '2b0087c147mshe1ab3718bf41644p18f0d4jsn25694138a303',
         'X-RapidAPI-Host': 'horoscopes-ai.p.rapidapi.com'
       }
     };
