@@ -1,32 +1,46 @@
 const posts = [
     {
-        title: "What is SaaS? Software as a Service Explained",
-        desc: "Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people.",
-        img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        date: "Jan 4 2022",
+        title: "Comet C/2023 E3 comes close to Earth",
+        desc: "In early February, the comet C/2023 E3 will travel within about 26.4 million miles of our planet—the closest it's been to Earth since Homo sapiens began settling in Europe and Asia from Africa, according to KTLA’s Eric Henrikson and Cameron Kiszla.",
+        img: "/i/1.1.webp",
+        date: "Feb 02 2023",
         href: "javascript:void(0)"
     },
     {
-        title: "A Quick Guide to WordPress Hosting",
-        desc: "According to him, â€œI'm still surprised that this has happened. But we are surprised because we are so surprised.â€More revelations.",
-        img: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        date: "Jan 4 2022",
+        title: "Venus-Jupiter conjunction",
+        desc: "In astronomy, a conjunction occurs when a planet appears close to a moon, another planet or a star. Conjunctions occur fairly frequently and have “no profound astronomical significance, but they are nice to view,” according to NASA.",
+        img: "/i/2.1.webp",
+        date: " April 6 2023",
         href: "javascript:void(0)"
     },
     {
-        title: "7 Promising VS Code Extensions Introduced in 2022",
-        desc: "I hope I remembered all the stuff that they needed to know. They're like, 'okay,' and write it in their little reading notebooks.",
-        img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        date: "Jan 4 2022",
+        title: "Lyrid meteor shower",
+        desc: "Meteor showers occur when the Earth passes through debris left behind from comets and asteroids, which is why they occur at around the same time each year. The Lyrids originate from the comet Thatcher, which orbits the sun about every 415 years. This is one of the oldest recorded showers, with observations dating back to 687 B.C.E., writes Daisy Dobrijevic for Space.com.",
+        img: "/i/3.1.webp",
+        date: "April 15 to 29 2023",
         href: "javascript:void(0)"
     },
     {
-        title: "How to Use Root C++ Interpreter Shell to Write C++ Programs",
-        desc: "The powerful gravity waves resulting from the impact of the planets' moons â€” four in total â€” were finally resolved in 2015 when gravitational.",
-        img: "https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        date: "Jan 4 2022",
+        title: "Perseid meteor shower",
+        desc: "The Perseid meteor shower is one of the best of the year. Bright, frequent meteors with long tails will light up the sky at rates of about 50 to 100 per hour. The shower happens as Earth passes through debris left behind by the comet Swift-Tuttle, and it peaks as the Earth moves through the densest portion. Last year’s Perseids coincided with the full moon, making some shooting stars difficult to see. But this year, the shower will reach its spectacular peak two days before the new moon on August 11 and 12.",
+        img: "/i/4.1.webp",
+        date: "July 14 to September 1 2023",
         href: "javascript:void(0)"
-    }
+    },
+    {
+        title: "Orionids",
+        desc: "The Orionids are not typically as strong as the Perseids or the Geminids, but they are still worth watching. From a dark location, viewers can see about 10 to 20 meteors per hour at the shower's peak, which falls around the morning of October 22, per EarthSky's Deborah Byrd.",
+        img: "/i/5.1.webp",
+        date: "September 26 to November 2023",
+        href: "javascript:void(0)"
+    },
+    {
+        title: "Annular solar eclipse",
+        desc: "In mid-October, an annular solar eclipse will be visible from the southwestern U.S. Solar eclipses occur when the moon passes between the Earth and the sun. But because the moon won’t entirely cover the sun this year, a dazzling glowing circle, or a “ring of fire,” will be visible from certain locations. Such an annular solar eclipse can last for up to 12 minutes and 30 seconds, per Space.com’s Dobrijevic and Joe Rao, though this year, the maximum duration is about five minutes in the U.S.",
+        img: "/i/6.1.webp",
+        date: "October 14 2023",
+        href: "javascript:void(0)"
+    },
 ]
 
 export default function Card2() {
