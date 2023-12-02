@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Input } from "@material-tailwind/react";
-import Card2 from "../Card2";
+import axios from 'axios';
+import HoroscopeResult from "../HoroscopeResult";
+// const axios = require('axios');
 export default function Horroscope(){
-    
-
     const [state, setState] = useState(false)
 
     // Replace javascript:void(0) paths with your paths
@@ -52,15 +51,66 @@ export default function Horroscope(){
         </div>
     )
 
+    // State variables for selected values
+  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedPeriod, setSelectedPeriod] = useState('');
+  const [selectedSign, setSelectedSign] = useState('');
+  const [selectedType, setSelectedType] = useState('');
+  const [horoscopeData, setHoroscopeData] = useState(null);
+  // Event handlers for dropdown changes
+  const handleLanguageChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
+
+  const handlePeriodChange = (event) => {
+    setSelectedPeriod(event.target.value);
+  };
+
+  const handleSignChange = (event) => {
+    setSelectedSign(event.target.value);
+  };
+
+  const handleTypeChange = (event) => {
+    setSelectedType(event.target.value);
+  };
+  const handleClick = async () => {
+    // Access the selected values here and send them to your API
+    console.log('Selected Language:', selectedLanguage);
+    console.log('Selected Period:', selectedPeriod);
+    console.log('Selected Sign:', selectedSign);
+    console.log('Selected Type:', selectedType);
+
+    // Now you can send these values to your API using fetch or your preferred method
+    // Example using fetch:
+
+    const options = {
+      method: 'GET',
+      url: `https://horoscopes-ai.p.rapidapi.com/get_horoscope/${selectedSign}/${selectedPeriod}/${selectedType}/${selectedLanguage}`,
+      headers: {
+        'X-RapidAPI-Key': '74a2423726msh3a26e9ce0e8a5cdp1b8bdajsnf76125bfe2d0',
+        'X-RapidAPI-Host': 'horoscopes-ai.p.rapidapi.com'
+      }
+    };
+    
+    try {
+        const response = await axios.request(options);
+        console.log(response.data.general[0]);
+        setHoroscopeData(response.data.general[0]); 
+
+    } catch (error) {
+        console.error(error);
+    }
+  };
+
     return (
         <>
 
-        <div className="bg-gray-900">
+        <div className="horro bg-gray-900 " >
             <header>
                 <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
                     <Brand />
                 </div>
-                <nav className={`pb-5 md:text-sm ${state ? "absolute z-20 top-0 inset-x-0 bg-gray-800 rounded-xl mx-2 mt-2 md:mx-0 md:mt-0 md:relative md:bg-transparent" : ""}`}>
+                <nav className={`pb-4 md:text-sm ${state ? "absolute z-20 top-0 inset-x-0 bg-gray-800 rounded-xl mx-2 mt-2 md:mx-0 md:mt-0 md:relative md:bg-transparent" : ""}`}>
                     <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                         <Brand />
                         <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? 'block' : 'hidden'} `}>
@@ -89,64 +139,109 @@ export default function Horroscope(){
                     </div>
                 </nav>
             </header>
-            <section className="relative flex">
+            <div className="mb-6 mx-10">
+                <h2 className="text-3xl  text-green-400 font-extrabold mx-auto ">
+                    Get Your Horroscope Now
+                </h2>
+            </div>
+            <section className=" ms-4 relative flex">
                 {/* <div className="flex w-72 flex-col gap-6">
                     <Input color="blue" label="Input Blue" />
                     <Input color="purple" label="Input Purple" />
                     <Input color="indigo" label="Input Indigo" />
                     <Input color="teal" label="Input Teal" />
                 </div> */}
-            <div className="max-w-sm w-full text-gray-600 px-5 rounded-md py-4 bg-gray-50 ms-3 mb-3  "> 
-                <form
-                    onSubmit={(e) => e.preventDefault()}
-                    className="mt-8 space-y-5"
-                >
-                    <div>
-                        <div>
-                            <h1 className="text-green-600"><b>Enter the Details</b></h1>
-                        </div>
-                        <label className="font-medium">
-                            Language
-                        </label>
-                        <input
-                            type="email"
-                            required
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                        />
-                    </div>
-                    <div>
-                        <label className="font-medium">
-                            Period
-                        </label>
-                        <input
-                            type="password"
-                            required
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                        />
-                    </div>
-                    <div>
-                        <label className="font-medium">
-                            Sign
-                        </label>
-                        <input
-                            type="email"
-                            required
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                        />
-                    </div>
-                    <div>
-                        <label className="font-medium">
-                            Type
-                        </label>
-                        <input
-                            type="password"
-                            required
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                        />
-                    </div>
-                     
-                </form>
-            </div>   
+            <div className="max-w-sm w-full text-gray-600 px-5 rounded-md py-4 bg-gray-50 ms-3 mb-8   "> 
+            <form onSubmit={(e) => e.preventDefault()} className="mt-8 space-y-5">
+         
+        <div>
+          <label className="font-medium">Language</label>
+          <select
+            required
+            value={selectedLanguage}
+            onChange={handleLanguageChange}
+            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          >
+            <option value="" disabled selected>Select a Language</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">korean</option>
+            <option value="zh-t">Chinese (transditional)</option>
+            <option value="zh-s">Chinese (simplified)</option>
+          </select>
+        </div>
+
+        {/* Period dropdown */}
+        <div>
+          <label className="font-medium">Period</label>
+          <select
+            required
+            value={selectedPeriod}
+            onChange={handlePeriodChange}
+            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          >
+            <option value="" disabled>Select a Period</option>
+            <option value="today">today</option>
+            <option value="tomorrow">tomorrow</option>
+            <option value="yesterday">yesterday</option>
+            <option value="yearly">yearly</option>
+            <option value="weekly">weekly</option>
+            <option value="monthly">monthly</option>
+          </select>
+          {/* Display selected value */}
+          {/* <p>Selected Period: {selectedPeriod}</p> */}
+        </div>
+
+        {/* Sign dropdown */}
+        <div>
+          <label className="font-medium">Sign</label>
+          <select
+            required
+            value={selectedSign}
+            onChange={handleSignChange}
+            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          >
+            <option value="" disabled selected>Select a Sign</option>
+            <option value="aries">aries</option>
+            <option value="taurus">taurus</option>
+            <option value="gemini">gemini</option>
+            <option value="cancer">cancer</option>
+            <option value="leo">leo </option>
+            <option value="virgo">virgo</option>
+            <option value="libra">libra</option>
+            <option value="scorpius">scorpius</option>
+            <option value="sagittarius">sagittarius</option>
+            <option value="capricornus">capricornus</option>
+            <option value="aquarius">aquarius</option>
+            <option value="pisces">pisces</option>
+          </select>
+        </div>
+
+        {/* Type dropdown */}
+        <div>
+          <label className="font-medium">Type</label>
+          <select
+            required
+            value={selectedType}
+            onChange={handleTypeChange}
+            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+          >
+            <option value="" disabled selected>Select type</option>
+                            <option value="general">general</option>
+          </select>
+          </div>
+          <button
+          onClick={handleClick}
+          className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+        >
+          Submit
+        </button>
+         </form>
+        </div>   
+        {horoscopeData && <HoroscopeResult horoscopeData={horoscopeData} />}
                 <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
                     <div className="space-y-5 max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl text-white font-extrabold mx-auto md:text-5xl">
